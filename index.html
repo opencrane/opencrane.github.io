@@ -63,72 +63,8 @@ font-family: "Helvetica Neue", Helvetica, Arial
   <body>
     <div class="outer">
       <div class="splash"><img
-          src="https://s23.postimg.org/oy3kv2uxn/skitch.png"
-          alt="OpenWhisk plus Slack" style="height: 60px;"> </div>
-      <div class="inner">
-        <h3>Already a Team member?</h3>
-        <p>click here: <a href="https://openwhisk-team.slack.com/"><b>openwhisk-team.slack.com</b></a></p>
-      </div>
-      <div class="inner">
-        <h3>If not, join us!</h3>
-        <p>Join the OpenWhisk Community to discuss the project in
-          real-time.</p>
-        <ul style="text-align: left">
-          <li><strong>Talk</strong> to the core devs and the OpenWhisk
-            community.</li>
-          <li><strong>Learn</strong> from others and ask questions.</li>
-          <li><strong>Share</strong> your work and demos.</li>
-        </ul>
-        <form class="form-inline">
-          <div class="form-group"> <label for="exampleInputEmail2">Email:</label>
-            <input class="form-control" id="inputEmail"
-              placeholder="jane.doe@example.com" required=""
-              type="email"> </div>
-          <button type="button" class="btn btn-primary" style="margin:
-            5px;">Send invitation</button> </form>
-      </div>
-      <div class="inner">
-        <p>We are a friendly, respectful and inclusive community!</p>
-      </div>
-      <div class="footer"><a href="https://openwhisk-team.slack.com/"> </a>
-        <p><i>Code for Slack invite (this page) is on github:</i><br>
-          <i> </i><i><a
-              href="https://github.com/openwhisk/openwhisk-slackinvite"
-              target="blank">https://github.com/openwhisk/openwhisk-slackinvite</a></i></p>
-      </div>
+          src="https://github.com/opencrane/opencrane.github.io/raw/master/opencrane.png"
+          alt="Open Crane Project" style="height: 60px;"> </div>
     </div>
-    <script type="text/javascript">
-$(document).ready(function() {
-  var btn = $("button");
-  var res = $("#result");
-  var email = $('#inputEmail');
-  var actionUrl = "https://hagehage.api-gw.mybluemix.net/openwhisk-team/slackinvite";
-  function handler() {
-    var email = $("input")[0].value;
-    $.get(actionUrl, { email: email })
-      .done(function (data) {
-        btn.addClass("btn-success");
-        btn.html("WOOT. CHECK YOUR EMAIL!");
-        res.html(data.message);
-      })
-      .fail(function (err) {
-        res.html(err.statusText + ":Your invitation didn't work :-( ");
-        btn.addClass("btn-error");
-      });
-  }
-  btn.click(handler);
-  btn.prop("disabled", true);
-
-  function validate() {
-    console.log("validate")
-    if (email[0].validity.typeMismatch) {
-      btn.prop("disabled", true);
-    } else {
-      btn.prop("disabled", false);
-    }
-  }
-  email.keyup(validate);
-})
-</script>
   </body>
 </html>
